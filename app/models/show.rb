@@ -6,7 +6,9 @@ class Show < ActiveRecord::Base
   end
   
   def self.most_popular_show
-    Show.where("#{highest_rating}").order(:name)
-    binding.pry
+    Show.where("#{highest_rating}").order(:name) do |show|
+      binding.pry
+    end
+    
   end
 end
