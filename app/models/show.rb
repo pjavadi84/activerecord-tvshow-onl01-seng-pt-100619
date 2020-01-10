@@ -6,7 +6,8 @@ class Show < ActiveRecord::Base
   end
   
   def self.most_popular_show
-    Show.where("#{highest_rating}").order(:name)
+    # Show.where("#{highest_rating}").order(:name)
+    show = Show.where("release_date > 2002").order(release_date: :desc)
       binding.pry
   end
 end
