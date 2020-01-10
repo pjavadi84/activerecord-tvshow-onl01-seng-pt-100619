@@ -21,6 +21,6 @@ class Show < ActiveRecord::Base
   end
   
   def self.rating_sum
-    Song.sum(:rating)
+    Song.sum("rating")
   end
 end
