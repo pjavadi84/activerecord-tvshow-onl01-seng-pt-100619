@@ -7,7 +7,7 @@ class Show < ActiveRecord::Base
   
   def self.most_popular_show
     # Show.where("#{highest_rating}").order(:name)
-    show = Show.where("release_date > 2002").order(release_date: :desc)
+    show = Show.where("#{highest_rating}").order(rating: :desc)
       binding.pry
   end
 end
