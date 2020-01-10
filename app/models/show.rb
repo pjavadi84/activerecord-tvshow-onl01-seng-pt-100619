@@ -9,6 +9,5 @@ class Show < ActiveRecord::Base
     # Show.where("#{highest_rating}").order(:name)
     show = Show.where("#{highest_rating}").order(rating: :desc)
     show[0].name
-      binding.pry
   end
 end
