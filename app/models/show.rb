@@ -6,7 +6,7 @@ class Show < ActiveRecord::Base
   end
   
   def self.most_popular_show
-    Show.name.when(self.highest_rating)
+    Movie.where("#{highest_rating}").order(:name)
     binding.pry
   end
 end
