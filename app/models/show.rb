@@ -9,4 +9,8 @@ class Show < ActiveRecord::Base
     show = Show.where("#{highest_rating}").order(rating: :desc)
     show[0]
   end
+  
+  def self.lowest_rating
+    Show
+  end
 end
